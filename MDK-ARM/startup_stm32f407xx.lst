@@ -868,11 +868,11 @@ ARM Macro Assembler    Page 14
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp --apcs=int
 erwork --depend=lcd_gui\startup_stm32f407xx.d -olcd_gui\startup_stm32f407xx.o -
-I..\\Inc -IE:\1_elon_projects\×ÀÃæ\lcd_gui\lcd_gui\MDK-ARM\RTE -IC:\Keil_v5\ARM
-\PACK\ARM\CMSIS\4.2.0\CMSIS\Include -IC:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\1.
-0.8\Device\Include --predefine="__MICROLIB SETA 1" --predefine="__UVISION_VERSI
-ON SETA 514" --predefine="_RTE_ SETA 1" --predefine="STM32F40_41xxx SETA 1" --l
-ist=startup_stm32f407xx.lst startup_stm32f407xx.s
+I..\\Inc -IE:\1_elon_projects\lcd_gui\MDK-ARM\RTE -IC:\Keil_v5\ARM\PACK\ARM\CMS
+IS\4.2.0\CMSIS\Include -IC:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\In
+clude --predefine="__MICROLIB SETA 1" --predefine="__UVISION_VERSION SETA 514" 
+--predefine="_RTE_ SETA 1" --predefine="STM32F40_41xxx SETA 1" --list=startup_s
+tm32f407xx.lst startup_stm32f407xx.s
 
 
 

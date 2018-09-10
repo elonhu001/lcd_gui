@@ -55,6 +55,8 @@
 
 /* USER CODE BEGIN Includes */
 #include "lcd.h"
+#include "touch.h" 
+#include "ott2001a.h"
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/
@@ -131,6 +133,7 @@ void MX_FREERTOS_Init(void);
 //  return PASSED;
 //}
 
+
 /* USER CODE END 0 */
 
 /**
@@ -164,8 +167,8 @@ int main(void)
   MX_GPIO_Init();
   MX_FSMC_Init();
   /* USER CODE BEGIN 2 */
-  LCD_Init();
-  LCD_ShowString(30,40,210,24,24,"elon......");	
+
+
   /* USER CODE END 2 */
 
   /* Call init function for freertos objects (in freertos.c) */
@@ -184,7 +187,7 @@ int main(void)
   /* USER CODE END WHILE */
 
   /* USER CODE BEGIN 3 */
-
+  
   }
   /* USER CODE END 3 */
 

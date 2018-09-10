@@ -47,3 +47,9 @@ lcd_gui\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
 lcd_gui\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
 lcd_gui\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
 lcd_gui\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
+lcd_gui\freertos.o: ..\bsp\lcd\lcd.h
+lcd_gui\freertos.o: ..\bsp\sys\sys.h
+lcd_gui\freertos.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+lcd_gui\freertos.o: ..\bsp\touch\touch.h
+lcd_gui\freertos.o: ..\bsp\touch\gt9147.h
+lcd_gui\freertos.o: ..\bsp\touch\ott2001a.h

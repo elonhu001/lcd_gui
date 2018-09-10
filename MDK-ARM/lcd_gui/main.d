@@ -52,3 +52,6 @@ lcd_gui\main.o: ../Inc/fsmc.h
 lcd_gui\main.o: ..\bsp\lcd\lcd.h
 lcd_gui\main.o: ..\bsp\sys\sys.h
 lcd_gui\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+lcd_gui\main.o: ..\bsp\touch\touch.h
+lcd_gui\main.o: ..\bsp\touch\gt9147.h
+lcd_gui\main.o: ..\bsp\touch\ott2001a.h

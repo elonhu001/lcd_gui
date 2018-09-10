@@ -44,10 +44,7 @@ void LCD_WriteReg(u16 LCD_Reg,u16 LCD_RegValue)
 	LCD->LCD_RAM = LCD_RegValue;//д������	    		 
 }	   
 
-void opt_delay(u8 i)
-{
-	while(i--);
-}
+
 //���Ĵ���
 //LCD_Reg:�Ĵ�����ַ
 //����ֵ:����������
@@ -967,7 +964,7 @@ void LCD_Init(void)
 		LCD_WR_REG(0x2900);
 	}	
 	 
-	LCD_Display_Dir(1);		//default is vertical screen
+	LCD_Display_Dir(0);		//default is vertical screen
 	LCD_LED=1;				    //lighting the backlight
 	LCD_Clear(WHITE);     //full the scree with white color
 }  
