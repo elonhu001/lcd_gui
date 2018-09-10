@@ -24,7 +24,7 @@
 
 
 
-void opt_delay(u8 i);
+void opt_delay(u16 i);
 #endif
 
 

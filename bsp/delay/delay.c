@@ -243,9 +243,10 @@
 //	if(remain)delay_xms(remain);
 //} 
 
-void opt_delay(u8 i)
+void opt_delay(u16 i)
 {
 	while(i--);
+//  HAL_Delay(1);
 }
 //#endif
 			 

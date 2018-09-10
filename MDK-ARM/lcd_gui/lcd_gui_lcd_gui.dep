@@ -36,7 +36,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5B8D2765)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5B8D2765)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5475F300)
 I (..\bsp\lcd\font.h)(0x5710F362)
-I (..\bsp\delay\delay.h)(0x5B94ED80)
+I (..\bsp\delay\delay.h)(0x5B966585)
 I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h)(0x5B8D2777)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x5B8D2777)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5475F300)
@@ -85,8 +85,8 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x5B8D2765)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x5B8D2765)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5B8D2765)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5B8D2765)
-F (..\bsp\delay\delay.c)(0x5B94EC27)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Drivers/CMSIS/Include -I..\bsp\lcd -I..\bsp\sys -I..\bsp\delay -I..\bsp\touch-I E:\1_elon_projects\lcd_gui\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_HAL_DRIVER -DSTM32F407xx-o lcd_gui\delay.o --omf_browse lcd_gui\delay.crf --depend lcd_gui\delay.d)
-I (..\bsp\delay\delay.h)(0x5B94ED80)
+F (..\bsp\delay\delay.c)(0x5B966B71)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Drivers/CMSIS/Include -I..\bsp\lcd -I..\bsp\sys -I..\bsp\delay -I..\bsp\touch-I E:\1_elon_projects\lcd_gui\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_HAL_DRIVER -DSTM32F407xx-o lcd_gui\delay.o --omf_browse lcd_gui\delay.crf --depend lcd_gui\delay.d)
+I (..\bsp\delay\delay.h)(0x5B966585)
 I (..\bsp\sys\sys.h)(0x5B8E8487)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5B8D275D)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h)(0x5B8E7F3C)
@@ -136,7 +136,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h)(0x5B8D2777)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x5B8D2777)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x5B8D2777)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x5B8D2777)
-F (..\bsp\touch\ctiic.c)(0x5B94EDC2)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Drivers/CMSIS/Include -I..\bsp\lcd -I..\bsp\sys -I..\bsp\delay -I..\bsp\touch-I E:\1_elon_projects\lcd_gui\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_HAL_DRIVER -DSTM32F407xx-o lcd_gui\ctiic.o --omf_browse lcd_gui\ctiic.crf --depend lcd_gui\ctiic.d)
+F (..\bsp\touch\ctiic.c)(0x5B966D36)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Drivers/CMSIS/Include -I..\bsp\lcd -I..\bsp\sys -I..\bsp\delay -I..\bsp\touch-I E:\1_elon_projects\lcd_gui\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_HAL_DRIVER -DSTM32F407xx-o lcd_gui\ctiic.o --omf_browse lcd_gui\ctiic.crf --depend lcd_gui\ctiic.d)
 I (..\bsp\touch\ctiic.h)(0x5B93D8CB)
 I (..\bsp\sys\sys.h)(0x5B8E8487)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5B8D275D)
@@ -172,7 +172,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5B8D2765)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5B8D2765)
 I (..\bsp\lcd\lcd.h)(0x5B93D8CB)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5475F300)
-I (..\bsp\delay\delay.h)(0x5B94ED80)
+I (..\bsp\delay\delay.h)(0x5B966585)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x5B8D2777)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5475F300)
 I (../Inc/FreeRTOSConfig.h)(0x5B8E7CD2)
@@ -183,7 +183,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h)(0x5B8D2777)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/task.h)(0x5B8D2777)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/list.h)(0x5B8D2777)
-F (..\bsp\touch\gt9147.c)(0x5B94E296)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Drivers/CMSIS/Include -I..\bsp\lcd -I..\bsp\sys -I..\bsp\delay -I..\bsp\touch-I E:\1_elon_projects\lcd_gui\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_HAL_DRIVER -DSTM32F407xx-o lcd_gui\gt9147.o --omf_browse lcd_gui\gt9147.crf --depend lcd_gui\gt9147.d)
+F (..\bsp\touch\gt9147.c)(0x5B966585)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Drivers/CMSIS/Include -I..\bsp\lcd -I..\bsp\sys -I..\bsp\delay -I..\bsp\touch-I E:\1_elon_projects\lcd_gui\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_HAL_DRIVER -DSTM32F407xx-o lcd_gui\gt9147.o --omf_browse lcd_gui\gt9147.crf --depend lcd_gui\gt9147.d)
 I (..\bsp\touch\gt9147.h)(0x5B93D8CB)
 I (..\bsp\sys\sys.h)(0x5B8E8487)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5B8D275D)
@@ -221,7 +221,7 @@ I (..\bsp\lcd\lcd.h)(0x5B93D8CB)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5475F300)
 I (..\bsp\touch\touch.h)(0x5B94CD6D)
 I (..\bsp\touch\ctiic.h)(0x5B93D8CB)
-I (..\bsp\delay\delay.h)(0x5B94ED80)
+I (..\bsp\delay\delay.h)(0x5B966585)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5475F300)
 I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h)(0x5B8D2777)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x5B8D2777)
@@ -275,7 +275,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5B8D2765)
 I (..\bsp\touch\gt9147.h)(0x5B93D8CB)
 I (..\bsp\lcd\lcd.h)(0x5B93D8CB)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5475F300)
-I (..\bsp\delay\delay.h)(0x5B94ED80)
+I (..\bsp\delay\delay.h)(0x5B966585)
 I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x5475F2FE)
 F (../Src/main.c)(0x5B94E2F0)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Drivers/CMSIS/Include -I..\bsp\lcd -I..\bsp\sys -I..\bsp\delay -I..\bsp\touch-I E:\1_elon_projects\lcd_gui\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_HAL_DRIVER -DSTM32F407xx-o lcd_gui\main.o --omf_browse lcd_gui\main.crf --depend lcd_gui\main.d)
 I (../Inc/main.h)(0x5B93D8CB)

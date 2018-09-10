@@ -7,7 +7,7 @@
 //控制I2C速度的延时
 void CT_Delay(void)
 {
-	opt_delay(3);//about 2us
+	opt_delay(102);//about 2us
 } 
 //电容触摸芯片IIC接口初始化
 void CT_IIC_Init(void)
@@ -43,7 +43,7 @@ void CT_IIC_Start(void)
 	CT_SDA_OUT();     //sda线输出
 	CT_IIC_SDA=1;	  	  
 	CT_IIC_SCL=1;
-	opt_delay(41);//about 30us
+	opt_delay(1275);//about 30us
  	CT_IIC_SDA=0;//START:when CLK is high,DATA change form high to low 
 	CT_Delay();
 	CT_IIC_SCL=0;//钳住I2C总线，准备发送或接收数据 
@@ -55,7 +55,7 @@ void CT_IIC_Stop(void)
   taskENTER_CRITICAL();
 	CT_SDA_OUT();//sda线输出
 	CT_IIC_SCL=1;
-	opt_delay(41);//about 30us
+	opt_delay(1275);//about 30us
 	CT_IIC_SDA=0;//STOP:when CLK is high DATA change form low to high
 	CT_Delay();
 	CT_IIC_SDA=1;//发送I2C总线结束信号
@@ -142,7 +142,7 @@ u8 CT_IIC_Read_Byte(unsigned char ack)
 	u8 i,receive=0;
   taskENTER_CRITICAL();  
  	CT_SDA_IN();//SDA设置为输入
-	opt_delay(41);//about 30us
+	opt_delay(1275);//about 30us
 	for(i=0;i<8;i++ )
 	{ 
 		CT_IIC_SCL=0; 	    	   

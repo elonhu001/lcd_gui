@@ -90,7 +90,7 @@ void GT9147_RD_Reg(u16 reg,u8 *buf,u8 len)
 	CT_IIC_Send_Byte(GT_CMD_RD);   //发送读命令		   
 	CT_IIC_Wait_Ack();	   
 	for(i=0;i<len;i++)
-	{	   
+	{
     	buf[i]=CT_IIC_Read_Byte(i==(len-1)?0:1); //发数据	  
 	} 
     CT_IIC_Stop();//产生一个停止条件    
