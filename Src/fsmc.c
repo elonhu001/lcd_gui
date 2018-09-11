@@ -60,8 +60,8 @@ SRAM_HandleTypeDef hsram1;
 /* FSMC initialization function */
 void MX_FSMC_Init(void)
 {
-  FSMC_NORSRAM_TimingTypeDef read_write_Timing;
-//  FSMC_NORSRAM_TimingTypeDef write_Timing;
+  FSMC_NORSRAM_TimingTypeDef Timing;
+
   /** Perform the SRAM1 memory initialization sequence
   */
   hsram1.Instance = FSMC_NORSRAM_DEVICE;
@@ -82,24 +82,16 @@ void MX_FSMC_Init(void)
   hsram1.Init.WriteBurst = FSMC_WRITE_BURST_DISABLE;
   hsram1.Init.PageSize = FSMC_PAGE_SIZE_NONE;
   /* Timing */
-  read_write_Timing.AddressSetupTime = 0xfe;
-  read_write_Timing.AddressHoldTime = 0x00;
-  read_write_Timing.DataSetupTime = 60;
-  read_write_Timing.BusTurnAroundDuration = 0x00;
-  read_write_Timing.CLKDivision = 0x00;
-  read_write_Timing.DataLatency = 0x00;
-  read_write_Timing.AccessMode = FSMC_ACCESS_MODE_A;
-  
-//  write_Timing.AddressSetupTime = 9;
-//  write_Timing.AddressHoldTime = 0x00;
-//  write_Timing.DataSetupTime = 8;
-//  write_Timing.BusTurnAroundDuration = 0x00;
-//  write_Timing.CLKDivision = 0x00;
-//  write_Timing.DataLatency = 0x00;
-//  write_Timing.AccessMode = FSMC_ACCESS_MODE_A;
+  Timing.AddressSetupTime = 15;
+  Timing.AddressHoldTime = 15;
+  Timing.DataSetupTime = 255;
+  Timing.BusTurnAroundDuration = 15;
+  Timing.CLKDivision = 16;
+  Timing.DataLatency = 17;
+  Timing.AccessMode = FSMC_ACCESS_MODE_A;
   /* ExtTiming */
 
-  if (HAL_SRAM_Init(&hsram1, &read_write_Timing, NULL) != HAL_OK)
+  if (HAL_SRAM_Init(&hsram1, &Timing, NULL) != HAL_OK)
   {
     _Error_Handler(__FILE__, __LINE__);
   }

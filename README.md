@@ -6,6 +6,9 @@ the I2C i used in this project is not stm32 itself,  i simulate an I2C with PB0 
 /*********************************************************************************************************/
 TODO:there is a bug,  i can't  use tuch function, in the debug process,  i find that i cant read the ID of touch control IC, so i have to get a oscilloscop and check my I2C waveform
 
+2018-9-11
 i have find the root of this problem, my main frequncy is different from yuanzi, so my waveform is also diffrent from standard, now i modified my opt_delay(), i can use touch function now, but it is not stable, sometimes i cant use it, i will fix it tomorrow
 
+2018-9-11
+good news!! I have fixed this problem,  i use stm32CubeMX configed an I2C, it's not a simulated one, so i don't have to care about the waveform, now it's OK, next time i will try to write an push button to control led.
 /*********************************************************************************************************/

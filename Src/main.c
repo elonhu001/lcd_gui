@@ -50,13 +50,16 @@
 #include "main.h"
 #include "stm32f4xx_hal.h"
 #include "cmsis_os.h"
+#include "dma.h"
+#include "i2c.h"
+#include "tim.h"
 #include "gpio.h"
 #include "fsmc.h"
 
 /* USER CODE BEGIN Includes */
 #include "lcd.h"
 #include "touch.h" 
-#include "ott2001a.h"
+#include "delay.h"
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/
@@ -165,7 +168,10 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  MX_DMA_Init();
   MX_FSMC_Init();
+  MX_TIM3_Init();
+  MX_I2C1_Init();
   /* USER CODE BEGIN 2 */
 
 

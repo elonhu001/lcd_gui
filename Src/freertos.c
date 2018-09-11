@@ -60,9 +60,9 @@
 /* Variables -----------------------------------------------------------------*/
 osThreadId defaultTaskHandle;
 osSemaphoreId BinarySem01Handle;
-osThreadId lcd_TaskHandle;
-/* USER CODE BEGIN Variables */
 
+/* USER CODE BEGIN Variables */
+osSemaphoreId lcd_TaskHandle;
 /* USER CODE END Variables */
 
 /* Function prototypes -------------------------------------------------------*/
@@ -252,7 +252,7 @@ void ctp_test(void)
 					lastpos[t][1]=tp_dev.y[t];
 					if(tp_dev.x[t]>(lcddev.width-24)&&tp_dev.y[t]<20)
 					{
-						Load_Drow_Dialog();//清除
+//						Load_Drow_Dialog();//清除
 					}
 				}
 			}else lastpos[t][0]=0XFFFF;
@@ -264,16 +264,27 @@ void ctp_test(void)
 //	}	
 }
 
+#include "i2c.h"
+uint8_t test1[4];
+uint8_t test2[2] = {0x06, 0x66};
+#define MASTER_REQ_READ    0x12
+#define MASTER_REQ_WRITE   0x34
 void Start_lcd_Task(void const * argument)
 {
   LCD_Init();
   tp_dev.init();//initialize touch screen
   POINT_COLOR=RED;//设置字体为红色 
   LCD_ShowString(30,40,210,24,24,"elon......");	
+  
   while(1)
   {
 //    if(tp_dev.touchtype&0X80)
       ctp_test();//电容屏测试
+//   HAL_I2C_Master_Transmit(&hi2c1, GT_CMD_WR, (uint8_t*)GT_PID_REG, 2, 5);
+//    osDelay(1);
+//    HAL_I2C_Master_Receive(&hi2c1, GT_CMD_RD, test1, 4, 5);
+////    HAL_I2C_Master_Transmit(&hi2c1, GT_CMD_RD, test2, 2, 5);
+//    osDelay(2);
   }
 }
 /* USER CODE END Application */

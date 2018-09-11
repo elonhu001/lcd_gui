@@ -30,6 +30,8 @@ lcd_gui\ctiic.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h
 lcd_gui\ctiic.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h
 lcd_gui\ctiic.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_sram.h
 lcd_gui\ctiic.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_fsmc.h
+lcd_gui\ctiic.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h
+lcd_gui\ctiic.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h
 lcd_gui\ctiic.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
 lcd_gui\ctiic.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
 lcd_gui\ctiic.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
@@ -37,13 +39,4 @@ lcd_gui\ctiic.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 lcd_gui\ctiic.o: ..\bsp\lcd\lcd.h
 lcd_gui\ctiic.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 lcd_gui\ctiic.o: ..\bsp\delay\delay.h
-lcd_gui\ctiic.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
-lcd_gui\ctiic.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
-lcd_gui\ctiic.o: ../Inc/FreeRTOSConfig.h
-lcd_gui\ctiic.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
-lcd_gui\ctiic.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
-lcd_gui\ctiic.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
-lcd_gui\ctiic.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
-lcd_gui\ctiic.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
-lcd_gui\ctiic.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
-lcd_gui\ctiic.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+lcd_gui\ctiic.o: ../Inc/tim.h

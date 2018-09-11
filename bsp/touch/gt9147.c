@@ -6,7 +6,9 @@
 #include "lcd.h" 
 #include "lcd.h"
 #include "cmsis_os.h"
-
+#include "FreeRTOS.h"
+#include "task.h"
+#include "i2c.h"
 //GT9147配置参数表
 //第一个字节为版本号(0X60),必须保证新的版本号大于等于GT9147内部
 //flash原有版本号,才会更新配置.
@@ -37,6 +39,7 @@ const u8 GT9147_CFG_TBL[]=
 //     1,参数保存到flash
 u8 GT9147_Send_Cfg(u8 mode)
 {
+  taskENTER_CRITICAL();
 	u8 buf[2];
 	u8 i=0;
 	buf[0]=0;
@@ -45,6 +48,7 @@ u8 GT9147_Send_Cfg(u8 mode)
     buf[0]=(~buf[0])+1;
 	GT9147_WR_Reg(GT_CFGS_REG,(u8*)GT9147_CFG_TBL,sizeof(GT9147_CFG_TBL));//发送寄存器配置
 	GT9147_WR_Reg(GT_CHECK_REG,buf,2);//写入校验和,和配置更新标记
+  taskEXIT_CRITICAL();
 	return 0;
 } 
 //向GT9147写入一次数据
@@ -54,23 +58,10 @@ u8 GT9147_Send_Cfg(u8 mode)
 //返回值:0,成功;1,失败.
 u8 GT9147_WR_Reg(u16 reg,u8 *buf,u8 len)
 {
-	u8 i;
-	u8 ret=0;
-	CT_IIC_Start();	
- 	CT_IIC_Send_Byte(GT_CMD_WR);   	//发送写命令 	 
-	CT_IIC_Wait_Ack();
-	CT_IIC_Send_Byte(reg>>8);   	//发送高8位地址
-	CT_IIC_Wait_Ack(); 	 										  		   
-	CT_IIC_Send_Byte(reg&0XFF);   	//发送低8位地址
-	CT_IIC_Wait_Ack();  
-	for(i=0;i<len;i++)
-	{	   
-    	CT_IIC_Send_Byte(buf[i]);  	//发数据
-		ret=CT_IIC_Wait_Ack();
-		if(ret)break;  
-	}
-    CT_IIC_Stop();					//产生一个停止条件	    
-	return ret; 
+  taskENTER_CRITICAL();
+  HAL_I2C_Mem_Write(&hi2c1, GT_CMD_WR, reg, 2, buf, (uint16_t)len, 55);
+  taskEXIT_CRITICAL();  
+  return 0;
 }
 //从GT9147读出一次数据
 //reg:起始寄存器地址
@@ -78,22 +69,9 @@ u8 GT9147_WR_Reg(u16 reg,u8 *buf,u8 len)
 //len:读数据长度			  
 void GT9147_RD_Reg(u16 reg,u8 *buf,u8 len)
 {
-	u8 i; 
- 	CT_IIC_Start();	
- 	CT_IIC_Send_Byte(GT_CMD_WR);   //发送写命令 	 
-	CT_IIC_Wait_Ack();
- 	CT_IIC_Send_Byte(reg>>8);   	//发送高8位地址
-	CT_IIC_Wait_Ack(); 	 										  		   
- 	CT_IIC_Send_Byte(reg&0XFF);   	//发送低8位地址
-	CT_IIC_Wait_Ack();  
- 	CT_IIC_Start();  	 	   
-	CT_IIC_Send_Byte(GT_CMD_RD);   //发送读命令		   
-	CT_IIC_Wait_Ack();	   
-	for(i=0;i<len;i++)
-	{
-    	buf[i]=CT_IIC_Read_Byte(i==(len-1)?0:1); //发数据	  
-	} 
-    CT_IIC_Stop();//产生一个停止条件    
+  taskENTER_CRITICAL();
+  HAL_I2C_Mem_Read(&hi2c1, GT_CMD_RD, reg, 2, buf, (uint16_t)len, 55);   
+  taskEXIT_CRITICAL();
 } 
 //初始化GT9147触摸屏
 //返回值:0,初始化成功;1,初始化失败 
@@ -123,7 +101,6 @@ u8 GT9147_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_MEDIUM;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
   
-	CT_IIC_Init();      	//初始化电容屏的I2C总线  
 	HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET);//GT_RST=0;				//复位
 	osDelay(10);
  	HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_SET);//GT_RST=1;				//释放复位		    
@@ -136,10 +113,13 @@ u8 GT9147_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_MEDIUM;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 	
-	osDelay(100);  
+	osDelay(100);
+
 	GT9147_RD_Reg(GT_PID_REG,temp,4);//读取产品ID
+  
 	temp[4]=0;
-//	printf("CTP ID:%s\r\n",temp);	//打印ID
+//	sprintf("CTP ID:%s\r\n",temp);	//打印ID
+  LCD_ShowString(30,70,210,24,24,temp);
 	if(strcmp((char*)temp,"9147")==0)//ID==9147
 	{
 		temp[0]=0X02;			

@@ -30,6 +30,8 @@ lcd_gui\gt9147.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h
 lcd_gui\gt9147.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h
 lcd_gui\gt9147.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_sram.h
 lcd_gui\gt9147.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_fsmc.h
+lcd_gui\gt9147.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h
+lcd_gui\gt9147.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h
 lcd_gui\gt9147.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
 lcd_gui\gt9147.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
 lcd_gui\gt9147.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
@@ -55,3 +57,4 @@ lcd_gui\gt9147.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
 lcd_gui\gt9147.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
 lcd_gui\gt9147.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
 lcd_gui\gt9147.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
+lcd_gui\gt9147.o: ../Inc/i2c.h

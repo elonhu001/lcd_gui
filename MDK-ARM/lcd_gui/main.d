@@ -28,6 +28,8 @@ lcd_gui\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h
 lcd_gui\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h
 lcd_gui\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_sram.h
 lcd_gui\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_fsmc.h
+lcd_gui\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h
+lcd_gui\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h
 lcd_gui\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
 lcd_gui\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
 lcd_gui\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
@@ -47,6 +49,9 @@ lcd_gui\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
 lcd_gui\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
 lcd_gui\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
 lcd_gui\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
+lcd_gui\main.o: ../Inc/dma.h
+lcd_gui\main.o: ../Inc/i2c.h
+lcd_gui\main.o: ../Inc/tim.h
 lcd_gui\main.o: ../Inc/gpio.h
 lcd_gui\main.o: ../Inc/fsmc.h
 lcd_gui\main.o: ..\bsp\lcd\lcd.h
@@ -54,4 +59,4 @@ lcd_gui\main.o: ..\bsp\sys\sys.h
 lcd_gui\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 lcd_gui\main.o: ..\bsp\touch\touch.h
 lcd_gui\main.o: ..\bsp\touch\gt9147.h
-lcd_gui\main.o: ..\bsp\touch\ott2001a.h
+lcd_gui\main.o: ..\bsp\delay\delay.h

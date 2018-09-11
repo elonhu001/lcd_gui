@@ -31,6 +31,8 @@ lcd_gui\freertos.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h
 lcd_gui\freertos.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h
 lcd_gui\freertos.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_sram.h
 lcd_gui\freertos.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_fsmc.h
+lcd_gui\freertos.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h
+lcd_gui\freertos.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h
 lcd_gui\freertos.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
 lcd_gui\freertos.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
 lcd_gui\freertos.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
@@ -53,3 +55,4 @@ lcd_gui\freertos.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 lcd_gui\freertos.o: ..\bsp\touch\touch.h
 lcd_gui\freertos.o: ..\bsp\touch\gt9147.h
 lcd_gui\freertos.o: ..\bsp\touch\ott2001a.h
+lcd_gui\freertos.o: ../Inc/i2c.h
