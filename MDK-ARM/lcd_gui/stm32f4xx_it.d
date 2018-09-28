@@ -22,6 +22,7 @@ lcd_gui\stm32f4xx_it.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_e
 lcd_gui\stm32f4xx_it.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h
 lcd_gui\stm32f4xx_it.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h
 lcd_gui\stm32f4xx_it.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h
+lcd_gui\stm32f4xx_it.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h
 lcd_gui\stm32f4xx_it.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h
 lcd_gui\stm32f4xx_it.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h
 lcd_gui\stm32f4xx_it.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h
@@ -49,3 +50,10 @@ lcd_gui\stm32f4xx_it.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/timer
 lcd_gui\stm32f4xx_it.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
 lcd_gui\stm32f4xx_it.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
 lcd_gui\stm32f4xx_it.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
+lcd_gui\stm32f4xx_it.o: ..\bsp\STemWin540\inc\GUI.h
+lcd_gui\stm32f4xx_it.o: ..\bsp\STemWin540\inc\GUI_ConfDefaults.h
+lcd_gui\stm32f4xx_it.o: ..\bsp\STemWin540\Config\GUIConf.h
+lcd_gui\stm32f4xx_it.o: ..\bsp\STemWin540\inc\GUI_Type.h
+lcd_gui\stm32f4xx_it.o: ..\bsp\STemWin540\inc\LCD.h
+lcd_gui\stm32f4xx_it.o: ..\bsp\STemWin540\inc\Global.h
+lcd_gui\stm32f4xx_it.o: ..\bsp\STemWin540\inc\GUI_Version.h

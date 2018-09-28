@@ -3,8 +3,7 @@
 #include "ctiic.h"
 #include "delay.h" 
 #include "string.h" 
-#include "lcd.h" 
-#include "lcd.h"
+#include "ili93xx.h" 
 #include "cmsis_os.h"
 #include "FreeRTOS.h"
 #include "task.h"
@@ -102,9 +101,9 @@ u8 GT9147_Init(void)
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
   
 	HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET);//GT_RST=0;				//复位
-	osDelay(10);
+	osDelay(15);
  	HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_SET);//GT_RST=1;				//释放复位		    
-	osDelay(10); 
+	osDelay(15); 
 
   /*Configure GPIO pin : PtPin */
   GPIO_InitStruct.Pin = GPIO_PIN_1;
@@ -113,7 +112,7 @@ u8 GT9147_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_MEDIUM;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 	
-	osDelay(100);
+	osDelay(150);
 
 	GT9147_RD_Reg(GT_PID_REG,temp,4);//读取产品ID
   

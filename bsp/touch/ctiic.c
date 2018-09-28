@@ -1,6 +1,6 @@
 #include "ctiic.h"
 #include "delay.h"	 
-#include "lcd.h"
+#include "ili93xx.h"
 #include "tim.h"
 
 

@@ -2,7 +2,7 @@
 #define __TOUCH_H__
 #include "sys.h" 
 #include "gt9147.h"	       
-#include "lcd.h"
+#include "ili93xx.h"
 
 
 #define TP_PRES_DOWN 0x80  //´¥ÆÁ±»°´ÏÂ	  

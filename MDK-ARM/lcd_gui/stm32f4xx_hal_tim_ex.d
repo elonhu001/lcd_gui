@@ -22,6 +22,7 @@ lcd_gui\stm32f4xx_hal_tim_ex.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ha
 lcd_gui\stm32f4xx_hal_tim_ex.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h
 lcd_gui\stm32f4xx_hal_tim_ex.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h
 lcd_gui\stm32f4xx_hal_tim_ex.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h
+lcd_gui\stm32f4xx_hal_tim_ex.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h
 lcd_gui\stm32f4xx_hal_tim_ex.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h
 lcd_gui\stm32f4xx_hal_tim_ex.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h
 lcd_gui\stm32f4xx_hal_tim_ex.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h

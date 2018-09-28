@@ -1,10 +1,10 @@
 #include "touch.h" 
-#include "lcd.h"
+#include "ili93xx.h"
 #include "delay.h"
 #include "stdlib.h"
 #include "math.h"
 //#include "24cxx.h" 
-#include "lcd.h"
+#include "ili93xx.h"
 #include "gt9147.h"
 
 _m_tp_dev tp_dev=
@@ -442,7 +442,7 @@ u8 TP_Init(void)
 {
 	if(lcddev.id==0X5510)		//µçÈÝ´¥ÃþÆÁ
 	{
-    GT9147_Init();//we use capacitance touch screen, the control IC is GT9174
+    while(!GT9147_Init());//we use capacitance touch screen, the control IC is GT9174
 
 		tp_dev.scan=GT9147_Scan;	//use GT9147_Scan() to scan the screen 
 		tp_dev.touchtype|=0X80;	//touchtype is capacitance

@@ -52,9 +52,9 @@
 #include "cmsis_os.h"
 
 /* USER CODE BEGIN Includes */     
-#include "lcd.h"
+#include "ili93xx.h"
 #include "touch.h" 
-#include "ott2001a.h"
+#include "GUI.h"
 /* USER CODE END Includes */
 
 /* Variables -----------------------------------------------------------------*/
@@ -222,7 +222,8 @@ void lcd_draw_bline(u16 x1, u16 y1, u16 x2, u16 y2,u8 size,u16 color)
 			uCol+=incy; 
 		} 
 	}  
-}   
+}
+#define OTT_MAX_TOUCH (5)
 ////////////////////////////////////////////////////////////////////////////////
  //5个触控点的颜色(电容触摸屏用)												 
 const u16 POINT_COLOR_TBL[OTT_MAX_TOUCH]={RED,GREEN,BLUE,BROWN,GRED};  
@@ -265,26 +266,19 @@ void ctp_test(void)
 }
 
 #include "i2c.h"
-uint8_t test1[4];
-uint8_t test2[2] = {0x06, 0x66};
-#define MASTER_REQ_READ    0x12
-#define MASTER_REQ_WRITE   0x34
+int a;
 void Start_lcd_Task(void const * argument)
 {
-  LCD_Init();
-  tp_dev.init();//initialize touch screen
-  POINT_COLOR=RED;//设置字体为红色 
-  LCD_ShowString(30,40,210,24,24,"elon......");	
-  
+
+//  LCD_Init();
+//  POINT_COLOR=RED;//设置字体为红色 
+//  LCD_ShowString(30,40,210,24,24,"elon......");	
+//  tp_dev.init();//initialize touch screen  
   while(1)
   {
 //    if(tp_dev.touchtype&0X80)
-      ctp_test();//电容屏测试
-//   HAL_I2C_Master_Transmit(&hi2c1, GT_CMD_WR, (uint8_t*)GT_PID_REG, 2, 5);
-//    osDelay(1);
-//    HAL_I2C_Master_Receive(&hi2c1, GT_CMD_RD, test1, 4, 5);
-////    HAL_I2C_Master_Transmit(&hi2c1, GT_CMD_RD, test2, 2, 5);
-//    osDelay(2);
+//      ctp_test();//电容屏测试
+
   }
 }
 /* USER CODE END Application */

@@ -25,6 +25,7 @@ lcd_gui\touch.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h
 lcd_gui\touch.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h
 lcd_gui\touch.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h
 lcd_gui\touch.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h
+lcd_gui\touch.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h
 lcd_gui\touch.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h
 lcd_gui\touch.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h
 lcd_gui\touch.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h
@@ -37,7 +38,7 @@ lcd_gui\touch.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
 lcd_gui\touch.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
 lcd_gui\touch.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 lcd_gui\touch.o: ..\bsp\touch\gt9147.h
-lcd_gui\touch.o: ..\bsp\lcd\lcd.h
+lcd_gui\touch.o: ..\bsp\lcd\ili93xx.h
 lcd_gui\touch.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 lcd_gui\touch.o: ..\bsp\delay\delay.h
 lcd_gui\touch.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h

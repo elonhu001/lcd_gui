@@ -37,7 +37,7 @@
 #include "cmsis_os.h"
 
 /* USER CODE BEGIN 0 */
-
+#include "GUI.h"
 /* USER CODE END 0 */
 
 /* External variables --------------------------------------------------------*/
@@ -154,7 +154,8 @@ void DebugMon_Handler(void)
 void SysTick_Handler(void)
 {
   /* USER CODE BEGIN SysTick_IRQn 0 */
-
+//  extern volatile GUI_TIMER_TIME OS_TimeMS;
+//  OS_TimeMS ++;
   /* USER CODE END SysTick_IRQn 0 */
   osSystickHandler();
   /* USER CODE BEGIN SysTick_IRQn 1 */

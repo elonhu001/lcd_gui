@@ -1,7 +1,7 @@
 #ifndef __GT9147_H
 #define __GT9147_H	
 #include "sys.h"
-#include "lcd.h"
+#include "ili93xx.h"
 
 
 //IO²Ù×÷º¯Êý	 

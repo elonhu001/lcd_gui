@@ -50,6 +50,7 @@
 #include "main.h"
 #include "stm32f4xx_hal.h"
 #include "cmsis_os.h"
+#include "crc.h"
 #include "dma.h"
 #include "i2c.h"
 #include "tim.h"
@@ -57,9 +58,10 @@
 #include "fsmc.h"
 
 /* USER CODE BEGIN Includes */
-#include "lcd.h"
+#include "ili93xx.h"
 #include "touch.h" 
 #include "delay.h"
+#include "GUI.h"
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/
@@ -170,10 +172,17 @@ int main(void)
   MX_GPIO_Init();
   MX_DMA_Init();
   MX_FSMC_Init();
-  MX_TIM3_Init();
+//  MX_TIM3_Init();
   MX_I2C1_Init();
+  MX_CRC_Init();
   /* USER CODE BEGIN 2 */
-
+  GUI_Init();
+//  GUITASK_INIT();
+  GUI_SetBkColor(GUI_BLUE);
+  GUI_SetColor(GUI_YELLOW);
+  GUI_Clear();
+  GUI_SetFont(&GUI_Font24_ASCII);
+  GUI_DispStringAt("aaaaaa \n", 0, 10);
 
   /* USER CODE END 2 */
 

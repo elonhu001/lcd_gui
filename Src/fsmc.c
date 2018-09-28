@@ -52,7 +52,13 @@
 #include "gpio.h"
 
 /* USER CODE BEGIN 0 */
-
+//  Timing.AddressSetupTime = 9;
+//  Timing.AddressHoldTime = 0;
+//  Timing.DataSetupTime = 8;
+//  Timing.BusTurnAroundDuration = 0;
+//  Timing.CLKDivision = 0;
+//  Timing.DataLatency = 0;
+//  Timing.AccessMode = FSMC_ACCESS_MODE_A;
 /* USER CODE END 0 */
 
 SRAM_HandleTypeDef hsram1;
@@ -82,12 +88,12 @@ void MX_FSMC_Init(void)
   hsram1.Init.WriteBurst = FSMC_WRITE_BURST_DISABLE;
   hsram1.Init.PageSize = FSMC_PAGE_SIZE_NONE;
   /* Timing */
-  Timing.AddressSetupTime = 15;
-  Timing.AddressHoldTime = 15;
-  Timing.DataSetupTime = 255;
-  Timing.BusTurnAroundDuration = 15;
-  Timing.CLKDivision = 16;
-  Timing.DataLatency = 17;
+  Timing.AddressSetupTime = 9;
+  Timing.AddressHoldTime = 0;
+  Timing.DataSetupTime = 8;
+  Timing.BusTurnAroundDuration = 0;
+  Timing.CLKDivision = 0;
+  Timing.DataLatency = 0;
   Timing.AccessMode = FSMC_ACCESS_MODE_A;
   /* ExtTiming */
 

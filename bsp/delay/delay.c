@@ -1,7 +1,7 @@
 #include "delay.h"
 #include "sys.h"
-#include "lcd.h"
 #include "cmsis_os.h"
+#include "ili93xx.h"
 //////////////////////////////////////////////////////////////////////////////////// 	 
 ////如果使用OS,则包括下面的头文件（以ucos为例）即可.
 //#if SYSTEM_SUPPORT_OS

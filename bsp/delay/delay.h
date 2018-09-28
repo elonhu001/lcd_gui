@@ -1,7 +1,7 @@
 #ifndef __DELAY_H
 #define __DELAY_H 			   
 #include <sys.h>	
-#include "lcd.h"
+#include "ili93xx.h"
 //////////////////////////////////////////////////////////////////////////////////  
 //本程序只供学习使用，未经作者许可，不得用于其它任何用途
 //ALIENTEK STM32F407开发板
@@ -21,8 +21,6 @@
 //void delay_init(u8 SYSCLK);
 //void delay_ms(u16 nms);
 //void delay_us(u32 nus);
-
-
 
 void opt_delay(u16 i);
 #endif
